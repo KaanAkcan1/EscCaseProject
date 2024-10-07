@@ -54,7 +54,7 @@ $(document).ready(function () {
         var quantity = $(this).data('quantity');
         var productId = $(this).data('productid');
 
-        var unitPriceString = $(this).data('unitprice') ;
+        var unitPriceString = $(this).data('unitprice').toString() ;
         unitPriceString = unitPriceString.replace(/\,/g, '.') ;
         var unitPrice = parseFloat(unitPriceString) ;
         
