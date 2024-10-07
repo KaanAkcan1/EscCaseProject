@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Ürün Listesi";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Ürün Listesi</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form id="productsForm" method="post" action="#">
+                <div class="form-group">
+                    <label for="productsJson">Ürünler JSON Formatında:</label>
+                    <textarea class="form-control" id="productsJson" name="updatedProductsJson" rows="10">@ViewBag.ProductsJson</textarea>
+                </div>
+                <div class="d-flex justify-content-end mb-3 mt-3">
+                    <button type="button" class="btn btn-primary btn-block" id="createDataBtn">Kaydet</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

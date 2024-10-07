@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewData["Title"]</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container-fluid vh-100 overflow-hidden">
+            <div class="row h-100">
+                <div class="col-md-7 d-none d-md-block bg-light">
+                    
+                </div>
+                <div class="col-md-5 d-flex justify-content-center align-items-center">
+                    <div class="w-75">
+                        <h2 class="text-center mb-4">GİRİŞ YAPIN</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Kullanıcı Adı</label>
+                                <input type="text" class="form-control" id="username" placeholder="User" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Şifre</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100 btn-login">Giriş Yap</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <a href="#">Şifremi unuttum?</a>
+                        </div>
+                        <div class="text-center mt-2">
+                            Henüz kayıt olmadınız mı? <a href="#">Kayıt ol</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <script>
+           
+
+            $(document).ready(function () {
+
+                $('.btn-login').on('click', function () {
+                    
+
+                    var data = {
+                        Username: $('#username').val(),
+                        Password: $('#password').val(),
+                    }
+
+                    $.ajax({
+                        url: '/api/v1/auth/login', 
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(data),
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            localStorage.setItem('accessToken', response.data.accessToken);
+                            localStorage.setItem('refreshToken', response.data.refreshToken);
+
+                            window.location.href = '/home/index';
+                        },
+                        error: function (error) {
+                            console.log("Error: ", error);
+                        }
+                    });
+                })
+            });
+        </script>
+    </body>
+</html>

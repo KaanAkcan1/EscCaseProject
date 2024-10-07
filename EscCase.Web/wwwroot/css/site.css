@@ -1,0 +1,57 @@
+:root {
+    --primary-color: #A4D7E1;
+    --primary-bold-color: #C0E1E8;
+    --secondary-color: #A4D6A0;
+    --secondary-bold-color: #C0E6C7;
+    --text-color: #565656;
+    --bg-color-esc: #D7D7D7;
+    --logo-color-esc: #A71A1C;
+}
+
+
+
+html {
+  font-size: 14px;
+  color:var(--text-color);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar-custom{
+    background-color: var(--primary-color);
+}
+
+.navbar-custom .nav-item a{
+    color:var(--text-color);
+}
+
+.bg-esc{
+    background-color : var(--bg-color-esc);
+}
+
+.close {
+    border: none;
+    background: none;
+    padding: 10px;
+    border-radius: 50%; 
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-left: auto;
+}
