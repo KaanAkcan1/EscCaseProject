@@ -26,4 +26,4 @@ Case'de verilen istekleri yerine getirmek için yapılmış bir projedir.
 
 => Veri Al sayfasında projede istenildiği gibi verilerin Json formatında çıktısı gelmektedir.
 
-=> Veri Yükle sayfasında önce rastgele veriler oluşturularak ekrandaki inputta görünüyor. Eğer istenilirse buradan formaya uygun şekilde değişiklikler yapılabilir. Ardından sağ alttaki butona basıldığında bu veriler sisteme yüklenecektir.
+=> Veri Yükle sayfasında önce rastgele veriler oluşturularak ekrandaki inputta görünüyor. Eğer istenilirse buradan formata uygun şekilde değişiklikler yapılabilir. Ardından sağ alttaki butona basıldığında bu veriler sisteme yüklenecektir.
