@@ -5,16 +5,19 @@ Merhabalar.
 Case'de verilen istekleri yerine getirmek için yapılmış bir projedir.
 
 ## Kurulum Adımları
+=> "EscCase.Web.sln" dosyasını açarak projemizi açıyoruz.
 
-=> Öncelikle projeyi açtıktan sonra startup projesi olarak EscCase.Web projesi seçilmelidir.
+=> Öncelikle projeyi açtıktan sonra startup projesi olarak "EscCase.Web" projesi seçilmelidir.
 
-=> Ardından Package Manager Console açılarak Default Proje Olarak EscCase.Data seçeneğini seçmeniz gerekiyor.
+=> Ardından Package Manager Console açılarak Default Proje Olarak "EscCase.Data" seçeneğini seçmeniz gerekiyor.
 
-=> appsettings.json dosyası içerisindeki ConnectionString'imizi kendi database'inize göre düzenlemeniz gerekmektedir.
+=> "appsettings.json" dosyası içerisindeki "ConnectionStrings" içerisinde bulunan "MSSQL" değişkenindeki connection string'imizi kendi database'inize göre düzenlemeniz gerekmektedir.
 
-=> Package Manager Console üzerine "add-migration initial" komutunu yazmalısınız.
+=> Package Manager Console üzerinde "add-migration initial" komutunu yazmalısınız.
 
-=> Done yazısını gördükten sonra "update-database" yazarak Db'mizi hazır hale getiriyoruz.
+=> Done yazısını gördükten sonra "update-database" yazarak Done yazısını görünce Db'mizi hazır hale getiriyoruz.
+
+=> Artık projemizi çalıştırabiliriz.
 
 => Proje çalıştıktan sonra "admin" kullanıcı adı ve "password" şifresi ile giriş yapabilirsiniz.
 
